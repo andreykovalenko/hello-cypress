@@ -17,6 +17,6 @@ RUN apt-get install -y \
     libasound2 \
     xvfb
 
-RUN cd /home/buildagent/
-RUN curl https://cdn.cypress.io/desktop/2.0.3/linux64/cypress.zip --output cypress.zip
+# download cypress
+RUN curl https://cdn.cypress.io/desktop/2.0.3/linux64/cypress.zip --output /home/buildagent/cypress.zip
 RUN export CYPRESS_BINARY_VERSION=/home/buildagent/cypress.zip
